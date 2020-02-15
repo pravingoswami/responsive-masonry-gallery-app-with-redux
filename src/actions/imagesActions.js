@@ -22,14 +22,7 @@ export const startSetImages = () => {
     }
 }
 
-const editImage = (id, formData) => {
-    return {
-        type : "EDIT_IMAGE",
-        payload : {id, formData}
-    }
-}
-
-export const startEditImage = (id, formData, redirect) => {
+export const startEditImage = (id, formData) => {
     return(dispatch) => {
         let images = JSON.parse(localStorage.getItem('images'))
         images = images.map(img => {
@@ -40,12 +33,7 @@ export const startEditImage = (id, formData, redirect) => {
             }
         })
         localStorage.setItem("images", JSON.stringify(images))
-        // dispatch(editImage(id, formData))
         console.log('updated',images)
-        // dispatch(editImage(id, formData))
         dispatch(setImages(JSON.parse(localStorage.getItem('images'))))
-
-
-        // redirect()
     }
 }

@@ -6,17 +6,6 @@ const imagesReducers = (state = imagesInitialState, action) => {
         case 'SET_IMAGES' : {
             return [...action.payload]
         }
-
-        case 'EDIT_IMAGE' : {
-            return state.map(img => {
-                if(img.id == action.payload.id){
-                    return {...img, ...action.payload.formData}
-                } else {
-                    return {...img}
-                }
-            })
-        }
-
         default : {
             return state
         }

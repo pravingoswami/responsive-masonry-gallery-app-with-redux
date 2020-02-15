@@ -1,7 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import './style.css'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from 'reactstrap';
+import { Button, Input, Label, Form } from 'reactstrap';
 
 
 
@@ -38,10 +37,7 @@ handleSubmit = (e) => {
         name : this.state.name,
         description : this.state.description
     }
-    console.log(formData, this.state.id)
     this.props.handleSubmit(this.state.id, formData)
-    // const redirect = () => this.props.history.push('/images-without-data')
-    // redirect()
     this.setState({
         name : '',
         description : '',
@@ -74,7 +70,6 @@ handleSubmit = (e) => {
                                         )
                                     }
                                    </div>
-                                    {/* <button type="button" className="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Extra large modal</button> */}
 
                                 {
                                     this.props.handleSubmit && (
@@ -96,8 +91,11 @@ handleSubmit = (e) => {
                                                         <Button color = "primary" onClick = {this.handleSubmit} data-dismiss="modal" >Submit</Button>{' '}
                                                         </Form>
                                                         </div>
+                            
                                                 </div>
+                                                <br></br>
                                             </div>
+                                         
                                         </div>
                                         </div>
                                     )

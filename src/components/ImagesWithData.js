@@ -8,8 +8,7 @@ function ImagesWithDataa(props){
 
     return(
         <div>
-            <h1>Images with Data</h1>
-
+            <h1>{'Images with Data'.toUpperCase()}</h1>
             <MultipleImagesShow images = {props.images && props.images}  />
         </div>
     )
