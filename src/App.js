@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavbarDesign from './components/Navbar'
+import { BrowserRouter, Route, Link } from "react-router-dom"
+// import ImagesWithData from './components/images-with-data/ImagesWithData';
+// import ImagesWitouthData from './components/images-without-data/ImagesWithoutData';
+// import ModalDesign from './components/temp/ModalDesign';
+// import ImageEdit from './components/images-without-data/ImageEdit';
+import MultipleImageShow from './components/MultipleImageShow'
+import ImageInfo from './components/ImageInfo';
+import ImagesWithoutDataa from './components/ImagesWithoutDataa.';
+import ImagesWithData from './components/ImagesWithData';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component{
+  render(){
+    return(
+      <div>
+        <BrowserRouter>
+
+          <NavbarDesign />
+
+
+          <Route path = "/images-without-data" component = {ImagesWithoutDataa} exact = {true} />
+          {/* <Route path = "/images-without-data/:image" component = {ImageEdit} /> */}
+          <Route path = "/images-with-data" component = {ImagesWithData} />
+          <Route path = "/temp" component = {ImageInfo} />
+        
+        </BrowserRouter>
+      </div>
+    )
+  }
 }
 
 export default App;
