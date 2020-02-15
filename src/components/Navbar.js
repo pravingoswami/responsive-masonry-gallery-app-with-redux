@@ -34,10 +34,7 @@ function NavbarDesign(props){
             </NavItem>
             <NavItem>
               <NavLink> <Link style = {linkStyle} to = "/images-with-data"  >Images With Data</Link> </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink> <Link style = {linkStyle} to = "/temp"  >Images</Link> </NavLink>
-            </NavItem>          
+            </NavItem>     
           </Nav>
         </Collapse>
       </Navbar>

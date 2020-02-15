@@ -14,7 +14,6 @@ class App extends React.Component{
           <NavbarDesign />
           <Route path = "/images-without-data" component = {ImagesWithoutDataa} exact = {true} />
           <Route path = "/images-with-data" component = {ImagesWithData} />
-        
         </BrowserRouter>
       </div>
     )
